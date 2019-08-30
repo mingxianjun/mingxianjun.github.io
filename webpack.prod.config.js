@@ -15,8 +15,8 @@ const AutoPreFixer = require('autoprefixer');
 
 const devConfig = merge(baseConfig, {
     output: {
-      publicPath: './dist',
-      chunkFilename: './chunks/[name].chunk.js'
+      publicPath: './dist/',
+      chunkFilename: 'chunks/[name].chunk.js'
     },
     optimization: {
       minimizer: [
@@ -79,8 +79,8 @@ const devConfig = merge(baseConfig, {
       [
         new CleanWebpackPlugin(),
         new MinCssExtractPlugin({
-          filename: './css/[name].css',
-          chunkFilename: './css/[name].chunk.css'
+          filename: 'css/[name].css',
+          chunkFilename: 'css/[name].chunk.css'
         }),
         new webpack.HashedModuleIdsPlugin({
           hashFunction: 'sha256',
