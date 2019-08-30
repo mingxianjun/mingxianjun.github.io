@@ -1,0 +1,58 @@
+{
+  "name": "my-site",
+  "version": "1.0.0",
+  "description": "个人网站",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack-dev-server --inline --progress --config webpack.dev.config.js",
+    "build": "webpack --config webpack.prod.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mingxianjun/mingxianjun.github.io.git"
+  },
+  "keywords": [
+    "个人网站、github"
+  ],
+  "author": "MingXianJun",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mingxianjun/mingxianjun.github.io/issues"
+  },
+  "homepage": "https://github.com/mingxianjun/mingxianjun.github.io#readme",
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "autoprefixer": "^9.6.1",
+    "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.2.0",
+    "file-loader": "^4.2.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "postcss-loader": "^3.0.0",
+    "style-loader": "^1.0.0",
+    "stylus": "^0.54.7",
+    "stylus-loader": "^3.0.2",
+    "terser-webpack-plugin": "^1.4.1",
+    "url-loader": "^2.1.0",
+    "webpack": "^4.39.2",
+    "webpack-cli": "^3.3.7",
+    "webpack-dev-server": "^3.8.0",
+    "webpack-merge": "^4.2.1"
+  },
+  "browserslist": [
+    "ie>=11",
+    "ff>=52",
+    "Chrome>=49",
+    "Safari>=1"
+  ],
+  "dependencies": {
+    "@uirouter/angularjs": "^1.0.5",
+    "angular": "^1.5.11",
+    "oclazyload": "^1.1.0"
+  }
+}
