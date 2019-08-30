@@ -13,7 +13,7 @@ const OptimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plug
 const TerserWebpackPlugin = require('terser-webpack-plugin');
 const AutoPreFixer = require('autoprefixer');
 
-const devConfig = merge(baseConfig, {
+const prodConfig = merge(baseConfig, {
     output: {
       publicPath: './dist/',
       chunkFilename: 'chunks/[name].chunk.js'
@@ -91,4 +91,4 @@ const devConfig = merge(baseConfig, {
   })
 ;
 
-module.exports = devConfig;
+module.exports = prodConfig;
