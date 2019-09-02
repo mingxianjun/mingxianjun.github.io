@@ -8,7 +8,18 @@ export default {
   name: 'appRoot',
   factory() {
     return {
-      template: '<header></header><div class="app"><ui-view/></div>'
+      template: `<header ng-show="$ctrl.router.url !== '/home'"></header><ui-view class="app-content"/>`,
+      controller: ['$rootScope', function ($rootScope) {
+        /*this.$postLink = function () {
+          console.log('in postLink');
+        };
+        this.$onInit = function () {
+          console.log('in onInit');
+        };*/
+        this.$doCheck =  () => {
+          this.router = $rootScope.currentPage;
+        }
+      }]
     }
   }
 

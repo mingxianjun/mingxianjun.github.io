@@ -1,9 +1,15 @@
 /**
  * Created by MingXianJun on 2019/8/29
+ * 首页组件
  */
 
-export const HOME_MODULE = angular.module('homeModel',[]);
+import homeHtml from './home.html';
 
-HOME_MODULE.component('home',{
-  template:`<h1>this is home page</h1>`
-});
+export default {
+  name: 'home',
+  factory() {
+    return {
+      template: homeHtml
+    }
+  }
+}

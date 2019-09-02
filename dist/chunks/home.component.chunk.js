@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[2],{"5a398c7e420924b27be4":function(e,o,n){"use strict";n.r(o),n.d(o,"HOME_MODULE",function(){return t});var t=angular.module("homeModel",[]);t.component("home",{template:"<h1>this is home page</h1>"})}}]);

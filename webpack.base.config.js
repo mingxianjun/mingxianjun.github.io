@@ -29,23 +29,23 @@ module.exports = {
       },
       {
         test: /\.(woff2?|eot|ttf|otf|svg)(\?.*)?$/,
-        use:{
+        use: {
           loader: "url-loader",
           options: {
-            limit:10000,
-            name:'[name].[hash:6].[ext]',
-            outputPath:'./fonts'
+            limit: 10000,
+            name: '[name].[hash:6].[ext]',
+            outputPath: './fonts'
           }
         }
       },
       {
         test: /\.(png|jpe?g|gif|webp)(\?.*)?$/,
-        use:{
+        use: {
           loader: "url-loader",
           options: {
-            limit:10000,
-            name:'[name].[hash:6].[ext]',
-            outputPath:'./images'
+            limit: 10000,
+            name: '[name].[hash:6].[ext]',
+            outputPath: './images'
           }
         }
       },
@@ -60,7 +60,10 @@ module.exports = {
       path.resolve(__dirname, 'node_modules'),
       path.resolve(__dirname),
       path.resolve(__dirname, 'src')
-    ]
+    ],
+    alias: {
+      '@': path.resolve(__dirname, 'src')
+    }
   },
   plugins: [
     new HtmlWebpackPlugin({

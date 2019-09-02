@@ -10,10 +10,20 @@ export default {
     url: '/home',
     component: 'home',
     lazyLoad: function ($transition$) {
-      var $ocLazyLoad = $transition$.injector().get('$ocLazyLoad');
-      return import(/* webpackChunkName:"home.component"*/'./components/home.component').then(mod => {
+      //样式
+      import(/* webpackChunkName:"home.styl"*/'./components/home.styl');
+
+      const $ocLazyLoad = $transition$.injector().get('$ocLazyLoad');
+      return import(/* webpackChunkName:"home.module"*/'./components/home.module').then(mod => {
+        //首页模块
         $ocLazyLoad.load(mod.HOME_MODULE);
+        //第三方js库
+        return $ocLazyLoad.load('public/libs/ThreeWebGL.js');
+      }).then(()=>{
+        //第三方js库 依赖ThreeWebGL.js
+        return $ocLazyLoad.load('public/libs/ThreeExtras.js');
       });
+
     }
   }]
 }

@@ -2,3 +2,11 @@
 
 @import "mixins.styl";
 
+app-root
+  flexLayout(column,1,100%,100%)
+  overflow hidden
+  header
+    flexLayout(row,none,100%,60px)
+    background var(--main-color)
+  .app-content
+    flexLayout(column,1)
