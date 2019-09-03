@@ -38,7 +38,7 @@ class App {
     }]);
 
     //路由切换
-    this.app.run(['$rootScope', '$state','$timeout', function ($rootScope, $state,$timeout) {
+    this.app.run(['$rootScope', '$state', '$timeout', function ($rootScope, $state, $timeout) {
 
       $rootScope.pageLoading = true;
       $rootScope.$on('$viewContentLoading', function () {
@@ -50,7 +50,10 @@ class App {
       });
 
       $rootScope.$on('$viewContentLoaded', function () {
-        $timeout(function(){$rootScope.pageLoading = false;},800);
+        if (!$rootScope.currentPage.title) return;
+        $timeout(function () {
+          $rootScope.pageLoading = false;
+        }, 1000);
       });
 
     }]);

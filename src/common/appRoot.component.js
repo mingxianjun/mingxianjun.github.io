@@ -8,7 +8,7 @@ export default {
   name: 'appRoot',
   factory() {
     return {
-      template: `<header ng-show="$ctrl.router.url !== '/home'"></header><ui-view class="app-content"/>`,
+      template: `<header class="ng-hide" ng-show="$ctrl.router.url !== '/home'"></header><ui-view class="app-content"/>`,
       controller: ['$rootScope', function ($rootScope) {
         /*this.$postLink = function () {
           console.log('in postLink');
