@@ -7,9 +7,7 @@ import homeHtml from './home.html';
 
 export default {
   name: 'home',
-  factory() {
-    return {
-      template: homeHtml
-    }
+  options: {
+    template: homeHtml
   }
 }

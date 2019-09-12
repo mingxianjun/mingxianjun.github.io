@@ -5,10 +5,8 @@
 
 export default {
   name: 'header',
-  factory() {
-    return {
-      template: `<div>我是顶部导航栏</div>`
-    }
+  options: {
+    template: `<div>我是顶部导航栏</div>`
   }
 
 }

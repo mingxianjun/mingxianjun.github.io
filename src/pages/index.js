@@ -4,7 +4,9 @@
  */
 
 import homePage from './home';
+import mainPage from './main';
 
 export default [
-  homePage
+  homePage,
+  mainPage
 ]

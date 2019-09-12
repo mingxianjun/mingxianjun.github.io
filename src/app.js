@@ -5,23 +5,19 @@
 
 import angular from 'angular';
 import uiRouter from '@uirouter/angularjs';
-import oclazyload from 'oclazyload';
+import ocLazyLoad from 'oclazyload';
 import pages from './pages';
-import commonComponents from './common';
+import publicModules from './public';
 
 
 class App {
   constructor() {
-    this.depends = [uiRouter, oclazyload];
+    this.depends = [uiRouter, ocLazyLoad, publicModules];
     this.appName = 'app';
   }
 
   createApp() {
     this.app = window.app = angular.module(this.appName, this.depends);
-    //注册公共组件
-    commonComponents.forEach(component => {
-      this.app.component(component.name, component.factory());
-    });
   }
 
   configRouter() {
@@ -32,7 +28,7 @@ class App {
 
       pages.forEach(page => {
         //路由注册
-        page.routers.forEach(state => $stateProvider.state(state))
+        page.routers.forEach(state => $stateProvider.state(state));
       });
 
     }]);

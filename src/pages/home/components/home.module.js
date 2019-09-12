@@ -7,5 +7,5 @@ export const HOME_MODULE = angular.module('homeModel',[]);
 import homeComponent from './home.component';
 import cloudComponent from './cloud.component';
 
-HOME_MODULE.component(homeComponent.name,homeComponent.factory());
-HOME_MODULE.component(cloudComponent.name,cloudComponent.factory());
+HOME_MODULE.component(homeComponent.name,homeComponent.options);
+HOME_MODULE.component(cloudComponent.name,cloudComponent.options);

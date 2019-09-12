@@ -6,7 +6,10 @@ app-root
   flexLayout(column,1,100%,100%)
   overflow hidden
   header
-    flexLayout(row,none,100%,60px)
-    background var(--main-color)
+    positionLayout(fixed,10,0,0,100%,60px)
+    background transparent
   .app-content
     flexLayout(column,1)
+    padding-top 60px
+    color #fff
+    background linear-gradient(to bottom,#1e4877 0%,#4584b4 50%)

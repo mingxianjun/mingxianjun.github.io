@@ -18,10 +18,10 @@ export default {
         //首页模块
         $ocLazyLoad.load(mod.HOME_MODULE);
         //第三方js库
-        return $ocLazyLoad.load('public/libs/ThreeWebGL.js');
+        return $ocLazyLoad.load('static/libs/ThreeWebGL.js');
       }).then(()=>{
         //第三方js库 依赖ThreeWebGL.js
-        return $ocLazyLoad.load('public/libs/ThreeExtras.js');
+        return $ocLazyLoad.load('static/libs/ThreeExtras.js');
       });
 
     }

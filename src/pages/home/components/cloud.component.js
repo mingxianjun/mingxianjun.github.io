@@ -82,8 +82,8 @@ class CloudUtil {
   }
 
   onDocumentMouseMove() {
-    this.mouseX = ( event.clientX - this.windowHalfX ) * 0.25;
-    this.mouseY = ( event.clientY - this.windowHalfY ) * 0.15;
+    this.mouseX = (event.clientX - this.windowHalfX) * 0.25;
+    this.mouseY = (event.clientY - this.windowHalfY) * 0.15;
   }
 
   onWindowResize() {
@@ -109,23 +109,22 @@ class CloudUtil {
 
 export default {
   name: 'cloud',
-  factory() {
-    return {
-      controller() {
-        let cloudUtil = new CloudUtil('cloud');
-        //绘制背景
-        cloudUtil.drawBackground();
-        //绘制云
-        cloudUtil.init();
+  options: {
+    controller() {
+      let cloudUtil = new CloudUtil('cloud');
+      //绘制背景
+      cloudUtil.drawBackground();
+      //绘制云
+      cloudUtil.init();
 
-        //动画
-        function animate() {
-          requestAnimationFrame(animate);
-          cloudUtil.render();
-        }
-
-        animate();
+      //动画
+      function animate() {
+        requestAnimationFrame(animate);
+        cloudUtil.render();
       }
+
+      animate();
+
     }
   }
 }
