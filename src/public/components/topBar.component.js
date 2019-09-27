@@ -3,10 +3,21 @@
  * 导航栏组件
  */
 
+import {menuList} from '@/config';
+
 export default {
   name: 'header',
   options: {
-    template: `<div>我是顶部导航栏</div>`
+    bindings: {
+      router: '<'
+    },
+    template: `<a ui-sref="home" class="logo light-text"><i class="iconfont icon-tool-box"></i></a>
+               <a ng-repeat="menu in $ctrl.menuList" class="item" ng-class="{active:menu.url === $ctrl.router.url}" ui-sref="{{menu.url}}">
+                  <i class="{{menu.icon}}"></i><span class="label">{{menu.name}}</span>
+               </a>`,
+    controller() {
+      this.menuList = menuList;
+    }
   }
 
 }

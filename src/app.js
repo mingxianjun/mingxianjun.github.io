@@ -16,10 +16,24 @@ class App {
     this.appName = 'app';
   }
 
+  /**
+   *  创建app模块对象
+   * */
   createApp() {
     this.app = window.app = angular.module(this.appName, this.depends);
   }
 
+  /**
+   *  app模块配置
+   * */
+  configApp() {
+    this.configRouter();
+    this.routerChange();
+  }
+
+  /**
+   *  配置路由
+   * */
   configRouter() {
     this.app.config(['$stateProvider', '$uiRouterProvider', function ($stateProvider, $uiRouterProvider) {
 
@@ -32,8 +46,12 @@ class App {
       });
 
     }]);
+  }
 
-    //路由切换
+  /**
+   *  路由状态改变
+   * */
+  routerChange() {
     this.app.run(['$rootScope', '$state', '$timeout', function ($rootScope, $state, $timeout) {
 
       $rootScope.pageLoading = true;
@@ -49,16 +67,15 @@ class App {
         if (!$rootScope.currentPage.title) return;
         $timeout(function () {
           $rootScope.pageLoading = false;
-        }, 1000);
+        }, 600);
       });
 
     }]);
-
   }
 
   run() {
     this.createApp();
-    this.configRouter();
+    this.configApp();
     angular.bootstrap(document, [this.appName]);
   }
 }
