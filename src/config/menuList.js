@@ -4,6 +4,7 @@
  */
 
 export default [
-  {name:'主页',icon:'iconfont icon-tool-box',url:'/main'},
-  {name:'视图',icon:'iconfont icon-dashbord',url:'/dashboard'},
+  {name:'概要',icon:'iconfont icon-stacking',url:'main'},
+  {name:'视图配置',icon:'iconfont icon-dashboard',url:'dashboard'},
+  {name:'关于',icon:'iconfont icon-about',url:'about'},
 ]

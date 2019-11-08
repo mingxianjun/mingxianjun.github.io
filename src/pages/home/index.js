@@ -14,7 +14,7 @@ export default {
       import(/* webpackChunkName:"home.styl"*/'./components/home.styl');
 
       const $ocLazyLoad = $transition$.injector().get('$ocLazyLoad');
-      return import(/* webpackChunkName:"home.module"*/'./components/home.module').then(mod => {
+      return import(/* webpackChunkName:"home.module"*/'./module').then(mod => {
         //首页模块
         $ocLazyLoad.load(mod.HOME_MODULE);
         //第三方js库

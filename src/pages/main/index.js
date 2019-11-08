@@ -1,11 +1,10 @@
 /**
  * Created by MingXianJun on 2019/9/3
- * 应用主页
+ * 概要页面入口
  */
-import './components/main.component'
 export default {
   routers: [{
-    title: '我的主页',
+    title: '概要',
     name: 'main',
     url: '/main',
     component: 'main',
@@ -15,7 +14,7 @@ export default {
 
       const $ocLazyLoad = $transition$.injector().get('$ocLazyLoad');
       return import(/* webpackChunkName:"main.module"*/'./module').then(mod => {
-        //首页模块
+        //概要模块
         $ocLazyLoad.load(mod.MAIN_MODULE);
       })
 

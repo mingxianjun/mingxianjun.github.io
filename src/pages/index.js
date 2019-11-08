@@ -5,8 +5,10 @@
 
 import homePage from './home';
 import mainPage from './main';
+import dashboardPage from './dashboard';
 
 export default [
   homePage,
-  mainPage
+  mainPage,
+  dashboardPage
 ]

@@ -17,14 +17,14 @@ class App {
   }
 
   /**
-   *  创建app模块对象
+   * 创建app模块对象
    * */
   createApp() {
     this.app = window.app = angular.module(this.appName, this.depends);
   }
 
   /**
-   *  app模块配置
+   * app模块配置
    * */
   configApp() {
     this.configRouter();
@@ -32,7 +32,7 @@ class App {
   }
 
   /**
-   *  配置路由
+   * 配置路由
    * */
   configRouter() {
     this.app.config(['$stateProvider', '$uiRouterProvider', function ($stateProvider, $uiRouterProvider) {
@@ -49,25 +49,23 @@ class App {
   }
 
   /**
-   *  路由状态改变
+   * 页面切换
    * */
   routerChange() {
-    this.app.run(['$rootScope', '$state', '$timeout', function ($rootScope, $state, $timeout) {
+    this.app.run(['$rootScope', '$state', function ($rootScope, $state) {
 
       $rootScope.pageLoading = true;
       $rootScope.$on('$viewContentLoading', function () {
         $rootScope.pageLoading = true;
         $rootScope.currentPage = {
           title: $state.current.title,
-          url: $state.current.url
+          url: $state.current.name
         }
       });
 
       $rootScope.$on('$viewContentLoaded', function () {
         if (!$rootScope.currentPage.title) return;
-        $timeout(function () {
-          $rootScope.pageLoading = false;
-        }, 600);
+        $rootScope.pageLoading = false;
       });
 
     }]);

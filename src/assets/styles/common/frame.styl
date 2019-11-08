@@ -10,18 +10,18 @@ app-root
     display flex
     align-items center
     background rgba(#000,.1)
-    border-bottom 1px solid #444
+    border-bottom 1px solid #555
     .logo
       display flex
       width calc(var(--top-nav-height) * 1.5)
       height 100%
       align-items center
       justify-content center
-      border-right 1px solid #444
+      border-right 1px solid #555
       background rgba(#000,.2)
       .iconfont
         color #fff
-        font-size calc(var(--top-nav-height) - 26px)
+        font-size calc(var(--top-nav-height) - 20px)
       &:hover
         background rgba(white,.1)
     .item
@@ -29,7 +29,7 @@ app-root
       padding 0 2rem
       height 100%
       align-items center
-      font-size 1.5rem
+      font-size var(--font-size-label)
       border-bottom 2px solid transparent
       color #fff
       .label
@@ -38,8 +38,8 @@ app-root
         background rgba(white,.1)
         border-bottom 2px solid rgba(white,.2)
       &.active
-        color var(--active-color)
-        border-bottom 2px solid var(--active-color)
+        color var(--color-active)
+        border-bottom 2px solid var(--color-active)
   .app-content
     flexLayout(column,1)
     padding-top var(--top-nav-height)
