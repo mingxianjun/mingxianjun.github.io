@@ -1,21 +1,33 @@
-//flex 布局
-flexLayout(direction = row, flexVal = '', width = '', height = '')
-  display flex
-  flex-direction direction
-  if flexVal
-    flex flexVal
-  if width
-    width width
-  if height
-    height height
+// flex 布局
+flexLayout(direction = row, flexVal = '', width = '', height = '') {
+  display: flex;
+  flex-direction: direction;
 
-//定位布局
-positionLayout(type = absolute, zIndex = 1, left = 0, top = 0, width = '', height = '')
-  position type
-  z-index zIndex
-  left left
-  top top
-  if width
-    width width
-  if height
-    height height
+  if (flexVal) {
+    flex: flexVal;
+  }
+
+  if (width) {
+    width: width;
+  }
+
+  if (height) {
+    height: height;
+  }
+}
+
+// 定位布局
+positionLayout(type = absolute, zIndex = 1, left = 0, top = 0, width = '', height = '') {
+  position: type;
+  z-index: zIndex;
+  left: left;
+  top: top;
+
+  if (width) {
+    width: width;
+  }
+
+  if (height) {
+    height: height;
+  }
+}

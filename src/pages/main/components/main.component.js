@@ -8,6 +8,8 @@ import html from './main.html';
 export default {
   name: 'main',
   options: {
-    template: getPageTemplate(html)
+    template: getPageTemplate(html),
+    controller(){
+    }
   }
 }

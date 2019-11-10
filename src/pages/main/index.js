@@ -4,7 +4,7 @@
  */
 export default {
   routers: [{
-    title: '概要',
+    title: '概要视图',
     name: 'main',
     url: '/main',
     component: 'main',

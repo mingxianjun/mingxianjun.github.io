@@ -12,7 +12,7 @@ export default {
       router: '<'
     },
     template: `<a ui-sref="home" class="logo light-text"><i class="iconfont icon-tool-box"></i></a>
-               <a ng-repeat="menu in $ctrl.menuList" class="item" ng-class="{active:menu.url === $ctrl.router.url}" ui-sref="{{menu.url}}">
+               <a ng-repeat="menu in $ctrl.menuList" class="item" ui-sref-active="active" ui-sref="{{menu.url}}">
                   <i class="{{menu.icon}}"></i><span class="label">{{menu.name}}</span>
                </a>`,
     controller() {

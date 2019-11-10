@@ -1,21 +1,71 @@
-/*样式重置*/
-*
-  margin 0
-  padding 0
-  box-sizing border-box
+@import './mixins.styl';
 
-ul li
-  list-style none
+/* 样式重置 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-a
-  text-decoration none
+ul li {
+  list-style: none;
+}
 
-html
-body
-  height 100%
-  font-family 'Helvetica Neue', 'Helvetica', 'PingFang SC', 'Arial Narrow', sans-serif
-  font-size 12px
+a {
+  text-decoration: none;
+}
 
-.light-text
-  color #fff
-  text-shadow 0 0 5px #fff
+html, body {
+  height: 100%;
+  font-family: 'Helvetica Neue', 'Helvetica', 'PingFang SC', 'Arial Narrow', sans-serif;
+  font-size: 12px;
+}
+
+// 按钮
+button, .button {
+  flexLayout(row, '', '', 28px);
+  padding: 0 10px;
+  border: solid 1px #fff;
+  border-radius: 4px;
+  background: transparent;
+  color: #fff;
+  outline: none;
+  cursor: pointer;
+
+  &.short {
+    padding: 0 6px;
+  }
+
+  &:hover {
+    border: solid 1px var(--color-active);
+    color: var(--color-active);
+  }
+
+  &.disabled, &[disabled] {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+}
+
+// 可以点击的元素 一般使用在图标按钮上
+.link {
+  font-size: var(--font-size-title-max);
+  cursor: pointer;
+
+  &:hover {
+    color: var(--color-active);
+  }
+}
+
+// 居中
+.center {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+// 文本高亮
+.light-text {
+  color: #fff;
+  text-shadow: 0 0 5px #fff;
+}

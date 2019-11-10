@@ -1,0 +1,31 @@
+@import '../common/mixins.styl';
+
+panel {
+  flexLayout(column);
+  border: 1px solid rgba(#fff, 0.3);
+  border-radius: 4px;
+
+  .head {
+    flexLayout(row, '', '', 40px);
+    padding: 1rem;
+    align-items: center;
+    border-bottom: 1px solid rgba(#fff, 0.3);
+
+    .title {
+      margin-right: auto;
+      font-size: var(--font-size-title);
+    }
+
+    .link {
+      margin-left: 1rem;
+    }
+  }
+
+  .body {
+    padding: 1rem;
+
+    .item {
+      line-height: 20px;
+    }
+  }
+}

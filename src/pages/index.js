@@ -5,10 +5,10 @@
 
 import homePage from './home';
 import mainPage from './main';
-import dashboardPage from './dashboard';
+import viewConfig from './viewConfig';
 
 export default [
   homePage,
   mainPage,
-  dashboardPage
+  viewConfig
 ]

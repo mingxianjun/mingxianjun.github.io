@@ -1,51 +1,71 @@
-//页面框架
+// 页面框架
+@import 'mixins.styl';
 
-@import "mixins.styl";
+app-root {
+  flexLayout(column, 1, 100%, 100%);
+  overflow: hidden;
 
-app-root
-  flexLayout(column,1,100%,100%)
-  overflow hidden
-  header
-    positionLayout(fixed,10,0,0,100%,var(--top-nav-height))
-    display flex
-    align-items center
-    background rgba(#000,.1)
-    border-bottom 1px solid #555
-    .logo
-      display flex
-      width calc(var(--top-nav-height) * 1.5)
-      height 100%
-      align-items center
-      justify-content center
-      border-right 1px solid #555
-      background rgba(#000,.2)
-      .iconfont
-        color #fff
-        font-size calc(var(--top-nav-height) - 20px)
-      &:hover
-        background rgba(white,.1)
-    .item
-      display flex
-      padding 0 2rem
-      height 100%
-      align-items center
-      font-size var(--font-size-label)
-      border-bottom 2px solid transparent
-      color #fff
-      .label
-        margin-left 10px
-      &:hover
-        background rgba(white,.1)
-        border-bottom 2px solid rgba(white,.2)
-      &.active
-        color var(--color-active)
-        border-bottom 2px solid var(--color-active)
-  .app-content
-    flexLayout(column,1)
-    padding-top var(--top-nav-height)
-    color #fff
-    background linear-gradient(to bottom,#1e4877 0%,#4584b4 50%)
-    .page-content
-      flexLayout(column,1)
-      padding 1rem
-      
+  header {
+    positionLayout(fixed, 10, 0, 0, 100%, var(--top-nav-height));
+    display: flex;
+    align-items: center;
+    background: rgba(#000, 0.1);
+    border-bottom: 1px solid #555;
+
+    .logo {
+      display: flex;
+      width: calc(var(--top-nav-height) * 1.5);
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+      border-right: 1px solid #555;
+      background: rgba(#000, 0.2);
+
+      .iconfont {
+        color: #fff;
+        font-size: calc(var(--top-nav-height) - 20px);
+      }
+
+      &:hover {
+        background: rgba(white, 0.1);
+      }
+    }
+
+    .item {
+      display: flex;
+      padding: 0 2rem;
+      height: 100%;
+      align-items: center;
+      font-size: var(--font-size-label);
+      border-bottom: 2px solid transparent;
+      color: #fff;
+      transition: all 500ms;
+
+      .label {
+        margin-left: 10px;
+      }
+
+      &:hover {
+        background: rgba(white, 0.1);
+        border-bottom: 2px solid rgba(white, 0.2);
+      }
+
+      &.active {
+        color: var(--color-active);
+        border-bottom: 2px solid var(--color-active);
+      }
+    }
+  }
+
+  .app-content {
+    flexLayout(column, 1);
+    padding-top: var(--top-nav-height);
+    color: #fff;
+    background: linear-gradient(to bottom, #1e4877 0%, #4584b4 50%);
+
+    .page-content {
+      flexLayout(column, 1);
+      padding: 1rem;
+    }
+  }
+}
