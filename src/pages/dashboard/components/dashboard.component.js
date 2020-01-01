@@ -1,6 +1,6 @@
 /**
  * Created by MingXianJun on 2019/11/8
- * 仪表板组件
+ * 配置视图组件
  */
 
 import {getPageTemplate} from "@/util";

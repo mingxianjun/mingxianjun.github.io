@@ -5,6 +5,7 @@
 
 export default [
   {name:'概要视图',icon:'iconfont icon-stacking',url:'main'},
-  {name:'视图配置',icon:'iconfont icon-dashboard',url:'viewConfig'},
+  {name:'仪表板',icon:'iconfont icon-dashboard',url:'dashboard'},
+  {name:'可视化',icon:'iconfont icon-visualize',url:'visualize'},
   {name:'关于',icon:'iconfont icon-about',url:'about'},
 ]

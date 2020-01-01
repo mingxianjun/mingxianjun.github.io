@@ -103,7 +103,7 @@ class CloudUtil {
     context.fillStyle = gradient;
     context.fillRect(0, 0, canvas.width, canvas.height);
 
-    this.container.style.background = 'url(' + canvas.toDataURL('image/png') + ')';
+    // this.container.style.background = 'url(' + canvas.toDataURL('image/png') + ')';
   }
 }
 
