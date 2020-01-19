@@ -1,14 +1,23 @@
 /**
  * Created by MingXianJun on 2020/1/1
- * 新建视图项组件
+ * 可视化首页组件
  */
 
-import {getPageTemplate} from "@/util";
+import { getPageTemplate } from "@/util";
 import html from './visualize.html';
+import visTypeList from '@/public/visualize/types';
 
 export default {
-  name: 'visualize',
+  name: 'visualizePage',
   options: {
-    template: getPageTemplate(html)
+    template: getPageTemplate(html),
+    controller($state) {
+      this.visTypeList = visTypeList;
+      this.show = $state.current.name == 'visualize';
+      this.createVis = (type) => {
+        this.show = false;
+        $state.go('visualize.create', { type });
+      }
+    }
   }
 }

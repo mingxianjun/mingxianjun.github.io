@@ -5,6 +5,7 @@
 
 import homePage from './home';
 import mainPage from './main';
+import about from './about';
 import dashboard from './dashboard';
 import visualize from './visualize';
 
@@ -12,5 +13,6 @@ export default [
   homePage,
   mainPage,
   dashboard,
-  visualize
+  visualize,
+  about
 ]

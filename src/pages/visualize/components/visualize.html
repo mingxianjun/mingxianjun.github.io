@@ -1,1 +1,10 @@
-<h1>新建视图项</h1>
+<div class="mx card-list" ng-show="$ctrl.show">
+  <div class="card-wrap" ng-repeat="item in $ctrl.visTypeList">
+    <div class="card-item" ng-click="$ctrl.createVis(item.key)">
+      <div class="title" ng-bind="::item.name"></div>
+      <div class="icon {{::item.icon}}"></div>
+      <div class="desc" ng-bind="::item.desc"></div>
+    </div>
+  </div>
+</div>
+<div style="display: flex;flex: 1;" ui-view></div>

@@ -1,13 +1,13 @@
 /**
- * Created by MingXianJun on 2020/1/3
- * 仪表板组件
+ * Created by MingXianJun on 2020/1/5
+ * 关于组件
  */
 
 import {getPageTemplate} from "@/util";
-import html from './dashboard.html';
+import html from './about.html';
 
 export default {
-  name: 'dashboard',
+  name: 'about',
   options: {
     template: getPageTemplate(html)
   }

@@ -16,7 +16,8 @@ const devConfig = merge(baseConfig, {
           'style-loader',
           'css-loader',
           'stylus-loader'
-        ]
+        ],
+        exclude: /(node_modules)/
       }
     ]
   },

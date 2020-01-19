@@ -1,0 +1,40 @@
+@import '~@/assets/styles/common/mixins.styl';
+
+visualize-create {
+  padding: 0 !important;
+
+  .header {
+    flexLayout();
+    height: 40px;
+    align-items: center;
+    flex: none;
+
+    i {
+      font-size: var(--font-size-label);
+    }
+
+    span {
+      margin-left: 1rem;
+    }
+  }
+
+  .wrap {
+    flexLayout();
+    flex: 1;
+
+    .config {
+      flexLayout(column);
+      width: 30%;
+      height: 100%;
+      background: var(--color-background);
+    }
+
+    .canvas {
+      flexLayout(column);
+      margin-left: 1rem;
+      height: 100%;
+      flex: 1;
+      background: var(--color-background);
+    }
+  }
+}

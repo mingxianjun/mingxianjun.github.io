@@ -2,12 +2,14 @@
  * Created by MingXianJun on 2020/1/1
  * 可视化入口
  */
+import createRoute from './create';
+
 export default {
   routers: [{
     title: '可视化',
     name: 'visualize',
     url: '/visualize',
-    component: 'visualize',
+    component: 'visualizePage',
     lazyLoad: function ($transition$) {
       //样式
       import(/* webpackChunkName:"visualize.styl"*/'./components/visualize.styl');
@@ -17,5 +19,5 @@ export default {
         $ocLazyLoad.load(mod.VISUALIZE_MODULE);
       })
     }
-  }]
+  }, createRoute]
 }

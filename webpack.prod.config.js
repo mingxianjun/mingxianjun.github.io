@@ -70,7 +70,8 @@ const prodConfig = merge(baseConfig, {
               }
             },
             'stylus-loader'
-          ]
+          ],
+          exclude: /(node_modules)/
         }
       ]
     },
